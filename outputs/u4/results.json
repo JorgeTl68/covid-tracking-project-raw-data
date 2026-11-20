@@ -1,0 +1,174 @@
+{
+  "dataset": {
+    "raw_rows": 20780,
+    "clean_rows": 18995,
+    "states": 51,
+    "weeks": 52,
+    "period": [
+      "2020-03-02",
+      "2021-02-28"
+    ]
+  },
+  "pca_components": 6,
+  "pca_variance": 0.900404186324131,
+  "pca_variance_by_component": [
+    0.495460735001206,
+    0.1586489375077004,
+    0.08902979602150157,
+    0.07259346258891465,
+    0.04389404120723852,
+    0.04077721399756982
+  ],
+  "best_k": 4,
+  "silhouette_best_k": 2,
+  "dbscan": {
+    "eps": 0.534,
+    "min_samples": 5
+  },
+  "cluster_sizes": {
+    "1": 14,
+    "2": 14,
+    "3": 10,
+    "4": 13
+  },
+  "before_after": [
+    {
+      "model": "K-Means",
+      "stage": "Antes",
+      "params": "k = 8 (por defecto)",
+      "clusters": 8,
+      "noise": 0,
+      "silhouette": 0.14823963263455192,
+      "calinski_harabasz": 14.805983981818697,
+      "davies_bouldin": 1.253642168108105
+    },
+    {
+      "model": "K-Means",
+      "stage": "Después",
+      "params": "k = 4",
+      "clusters": 4,
+      "noise": 0,
+      "silhouette": 0.23724339662908744,
+      "calinski_harabasz": 21.64977915508847,
+      "davies_bouldin": 1.3306014427862638
+    },
+    {
+      "model": "Jerárquico (Ward)",
+      "stage": "Antes",
+      "params": "k = 2 (por defecto)",
+      "clusters": 2,
+      "noise": 0,
+      "silhouette": 0.3147465094327849,
+      "calinski_harabasz": 25.58398216098465,
+      "davies_bouldin": 0.9721757354922759
+    },
+    {
+      "model": "Jerárquico (Ward)",
+      "stage": "Después",
+      "params": "k = 4",
+      "clusters": 4,
+      "noise": 0,
+      "silhouette": 0.2107062399498814,
+      "calinski_harabasz": 19.928939639437754,
+      "davies_bouldin": 1.398025907157552
+    },
+    {
+      "model": "DBSCAN",
+      "stage": "Antes",
+      "params": "eps = 0.5; min_samples = 5 (por defecto)",
+      "clusters": 0,
+      "noise": 51,
+      "silhouette": NaN,
+      "calinski_harabasz": NaN,
+      "davies_bouldin": NaN
+    },
+    {
+      "model": "DBSCAN",
+      "stage": "Después",
+      "params": "eps = 0.53; min_samples = 5",
+      "clusters": 4,
+      "noise": 15,
+      "silhouette": 0.2797136432342111,
+      "calinski_harabasz": 19.600131044041227,
+      "davies_bouldin": 1.1013370193984995
+    }
+  ],
+  "comparison": [
+    {
+      "model": "K-Means",
+      "params": "k = 4",
+      "clusters": 4,
+      "noise": 0,
+      "silhouette": 0.2931594578294088,
+      "calinski_harabasz": 28.185013470446847,
+      "davies_bouldin": 1.1374488193488665,
+      "ari_vs_kmeans": 1.0
+    },
+    {
+      "model": "Jerárquico (Ward)",
+      "params": "k = 4",
+      "clusters": 4,
+      "noise": 0,
+      "silhouette": 0.2612565695772586,
+      "calinski_harabasz": 25.472729537265057,
+      "davies_bouldin": 1.2106751606594643,
+      "ari_vs_kmeans": 0.6130044011264185
+    },
+    {
+      "model": "DBSCAN",
+      "params": "eps = 0.53; min_samples = 5",
+      "clusters": 4,
+      "noise": 15,
+      "silhouette": 0.3510474014697188,
+      "calinski_harabasz": 27.422058990058886,
+      "davies_bouldin": 0.8992435616391534,
+      "ari_vs_kmeans": 0.4530148751937102
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": 1,
+      "states": 14,
+      "members": "AK, CO, IA, IL, MI, MN, MO, MT, ND, NE, NM, SD, WI, WY",
+      "peak_week": "2020-11-16",
+      "share_mar_may": 0.04792691118386864,
+      "share_jun_ago": 0.10627561386288668,
+      "share_sep_nov": 0.5350677117801454,
+      "share_dic_feb": 0.3107297631730991,
+      "name": "pico en noviembre"
+    },
+    {
+      "cluster": 2,
+      "states": 14,
+      "members": "ID, IN, KS, KY, NV, OH, OK, OR, PA, RI, TN, UT, WA, WV",
+      "peak_week": "2020-12-07",
+      "share_mar_may": 0.03996887293607825,
+      "share_jun_ago": 0.12838024427685327,
+      "share_sep_nov": 0.36711213060441833,
+      "share_dic_feb": 0.46453875218265,
+      "name": "pico en diciembre"
+    },
+    {
+      "cluster": 3,
+      "states": 10,
+      "members": "CT, DC, DE, MA, MD, ME, NH, NJ, NY, VT",
+      "peak_week": "2021-01-04",
+      "share_mar_may": 0.1476094600856937,
+      "share_jun_ago": 0.07571922925152826,
+      "share_sep_nov": 0.23235191047876502,
+      "share_dic_feb": 0.544319400184013,
+      "name": "ola de primavera y pico en enero"
+    },
+    {
+      "cluster": 4,
+      "states": 13,
+      "members": "AL, AR, AZ, CA, FL, GA, HI, LA, MS, NC, SC, TX, VA",
+      "peak_week": "2021-01-04",
+      "share_mar_may": 0.04019864902962265,
+      "share_jun_ago": 0.2294758419502802,
+      "share_sep_nov": 0.24710797659246234,
+      "share_dic_feb": 0.4832175324276347,
+      "name": "ola de verano y pico en enero"
+    }
+  ]
+}

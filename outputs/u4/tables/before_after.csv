@@ -1,0 +1,7 @@
+model,stage,params,clusters,noise,silhouette,calinski_harabasz,davies_bouldin
+K-Means,Antes,k = 8 (por defecto),8,0,0.1482,14.8060,1.2536
+K-Means,Después,k = 4,4,0,0.2372,21.6498,1.3306
+Jerárquico (Ward),Antes,k = 2 (por defecto),2,0,0.3147,25.5840,0.9722
+Jerárquico (Ward),Después,k = 4,4,0,0.2107,19.9289,1.3980
+DBSCAN,Antes,eps = 0.5; min_samples = 5 (por defecto),0,51,,,
+DBSCAN,Después,eps = 0.53; min_samples = 5,4,15,0.2797,19.6001,1.1013
