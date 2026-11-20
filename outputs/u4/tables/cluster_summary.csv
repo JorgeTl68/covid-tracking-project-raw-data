@@ -1,0 +1,5 @@
+cluster,states,members,peak_week,share_mar_may,share_jun_ago,share_sep_nov,share_dic_feb,name
+1,14,"AK, CO, IA, IL, MI, MN, MO, MT, ND, NE, NM, SD, WI, WY",2020-11-16,0.0479,0.1063,0.5351,0.3107,pico en noviembre
+2,14,"ID, IN, KS, KY, NV, OH, OK, OR, PA, RI, TN, UT, WA, WV",2020-12-07,0.0400,0.1284,0.3671,0.4645,pico en diciembre
+3,10,"CT, DC, DE, MA, MD, ME, NH, NJ, NY, VT",2021-01-04,0.1476,0.0757,0.2324,0.5443,ola de primavera y pico en enero
+4,13,"AL, AR, AZ, CA, FL, GA, HI, LA, MS, NC, SC, TX, VA",2021-01-04,0.0402,0.2295,0.2471,0.4832,ola de verano y pico en enero

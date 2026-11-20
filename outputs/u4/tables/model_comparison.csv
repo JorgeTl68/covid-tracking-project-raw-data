@@ -1,0 +1,4 @@
+model,params,clusters,noise,silhouette,calinski_harabasz,davies_bouldin,ari_vs_kmeans
+K-Means,k = 4,4,0,0.2932,28.1850,1.1374,1.0000
+Jerárquico (Ward),k = 4,4,0,0.2613,25.4727,1.2107,0.6130
+DBSCAN,eps = 0.53; min_samples = 5,4,15,0.3510,27.4221,0.8992,0.4530

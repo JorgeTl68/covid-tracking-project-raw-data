@@ -34,3 +34,24 @@ Modelos: línea base (tendencia), regresión lineal Ridge, regresión logística
 pip install -r requirements.txt
 python src/u3_supervised_analysis.py
 ```
+
+## U4 Saber Hacer: análisis no supervisado
+
+Pregunta: sin ninguna etiqueta, ¿qué estados vivieron una pandemia parecida?
+
+Cada estado se describe con la forma de su curva semanal de casos nuevos (52 semanas, de marzo de 2020 a febrero de 2021), dividida entre su semana más alta para comparar estados de cualquier tamaño. Las 52 semanas se reducen con PCA (6 componentes, 90 % de la varianza) y los estados se agrupan con K-Means, jerárquico de Ward y DBSCAN. Los modelos se evalúan con Silhouette, Calinski-Harabasz, Davies-Bouldin y estabilidad bootstrap, y se comparan los parámetros por defecto contra los optimizados.
+
+| Ruta | Contenido |
+|---|---|
+| `data/transformed/covid_state_weekly_profiles.csv` | Dataset transformado: un estado por fila, 52 semanas en escala 0-1 y grupo asignado |
+| `data/transformed/covid_state_pca_components.csv` | Componentes principales de cada estado y su grupo |
+| `src/u4_unsupervised_analysis.py` | Código fuente: transformación, PCA, agrupación, evaluación, optimización y gráficas |
+| `notebooks/u4_unsupervised_analysis.ipynb` | Notebook del proceso con resultados |
+| `outputs/u4/` | Tablas de búsqueda y comparación, y `results.json` |
+
+### Ejecutar
+
+```bash
+pip install -r requirements.txt
+python src/u4_unsupervised_analysis.py
+```
